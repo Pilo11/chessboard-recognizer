@@ -25,7 +25,7 @@ namespace ChessService.Controllers
         [HttpPost("result")]
         public async Task<string> Result([FromHeader] string player)
         {
-            var workingDirectory = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), ".."));
+            var workingDirectory = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "..", ".."));
             var targetFilename = Path.Combine(workingDirectory,"chess.png");
             System.IO.File.Delete(targetFilename);
 

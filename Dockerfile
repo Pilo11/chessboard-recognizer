@@ -11,4 +11,4 @@ RUN ["/bin/bash", "-c", "virtualenv venv && source venv/bin/activate && pip3 ins
 RUN ["python", "./generate_tiles.py"]
 RUN ["python", "./train.py"]
 EXPOSE 5000
-ENTRYPOINT ["dotnet", "run", "--project", "ChessService"]
+ENTRYPOINT ["dotnet", "run", "--project", "ChessSolution/ChessService"]
